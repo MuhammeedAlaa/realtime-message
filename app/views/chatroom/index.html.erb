@@ -8,7 +8,7 @@
         <div class="ui fluid raised card" style="height: 450px;">
             <div class="content">
                 <div class="ui blue vertical pointing menu">
-                    <a class="active item">
+                    <a class="item">
                         Home
                     </a>
                     <a class="item">
@@ -25,13 +25,7 @@
         <div class="ui fluid raised card" style="height: 450px;">
             <div class="content">
                 <div class="ui feed">
-                    <div class="event">
-                        <div class="content">
-                            <div class="summary">
-                                <em>Muhammad Alaa</em>: Test
-                            </div>
-                        </div>
-                    </div>
+                    <%= render @messages%>
                 </div>
             </div>
             <div class="extra content">
