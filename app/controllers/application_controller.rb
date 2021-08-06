@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
         @current_user ||= User.find(session[:user_id]) if session[:user_id]
     end
     def require_user
-        if logged_in?
+        if !logged_in?
             flash[:error] = "You must login first"
             redirect_to login_path
         end

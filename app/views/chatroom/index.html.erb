@@ -7,7 +7,7 @@
    <div class="ui four wide column">
         <div class="ui fluid raised card" style="height: 450px;">
             <div class="content">
-                <div class="ui blue vertical pointing menu">
+                <div class="ui blue vertical pointing menu" style="width: auto;">
                     <a class="item">
                         Home
                     </a>
@@ -23,20 +23,20 @@
     </div>
     <div class="ui twelve wide column">
         <div class="ui fluid raised card" style="height: 450px;">
-            <div class="content">
-                <div class="ui feed">
+            <div class="content" style="overflow: auto; height: 16em" id="messages">
+                <div class="ui feed" id="message-box">
                     <%= render @messages%>
                 </div>
             </div>
             <div class="extra content">
-                 <form class="ui reply form">
+                <%= form_for(@message, html: {class: "ui reply form"}, role: "form", url: message_path, remote: true) do |f|%>
                     <div class="field">
                         <div class="ui fluid blue icon input">
-                        <input type="text" placeholder="Enter your message...">
-                         <i class="bordered blue inverted icon edit"></i>
+                        <%= f.text_field :body,  placeholder: "Enter your message..."%>
+                         <%= f.button '<i class="bordered blue inverted icon edit"></i>'.html_safe%>
                         </div>
                     </div>
-                </form>
+                <% end %>
             </div>
         </div>
     </div>
