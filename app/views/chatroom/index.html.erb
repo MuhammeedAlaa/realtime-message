@@ -7,15 +7,9 @@
    <div class="ui four wide column">
         <div class="ui fluid raised card" style="height: 450px;">
             <div class="content">
-                <div class="ui blue vertical pointing menu" style="width: auto;">
-                    <a class="item">
-                        Home
-                    </a>
-                    <a class="item">
+                <div class="ui blue vertical pointing menu" style="width: auto;" id="online-users">
+                    <a class="item" >
                         Messages
-                    </a>
-                    <a class="item">
-                        Friends
                     </a>
                 </div>   
             </div>
@@ -33,7 +27,7 @@
                     <div class="field">
                         <div class="ui fluid blue icon input">
                         <%= f.text_field :body,  placeholder: "Enter your message..."%>
-                         <%= f.button '<i class="bordered blue inverted icon edit"></i>'.html_safe%>
+                         <%= f.button '<i class="bordered blue inverted icon edit" id="send-chat"></i>'.html_safe%>
                         </div>
                     </div>
                 <% end %>

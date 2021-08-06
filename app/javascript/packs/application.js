@@ -9,17 +9,19 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import '@doabit/semantic-ui-sass'
 
-Rails.start()
-Turbolinks.start()
-ActiveStorage.start()
-function scroll_down (){
-    if($("#messages").length > 0){
-        $("#messages").scrollTop($("#messages")[0].scrollHeight);
-    }
-}
-
+Rails.start();
+Turbolinks.start();
+ActiveStorage.start();
 $(document).on("turbolinks:load", () => {
     $(".ui.dropdown").dropdown();
     $('.message .close').on('click',function () {$(this).closest('.message').transition('fade')});
-    scroll_down();
+    $("#message_body").on('keydown', function(event){
+        if(event.key == 13){
+            event.target.textContent = "";
+            document.getElementById("send-chat").click();
+        }
+    });
+     if($("#messages").length > 0){
+        $("#messages").scrollTop($("#messages")[0].scrollHeight);
+    };
 });
