@@ -17,7 +17,7 @@ $(document).on("turbolinks:load", () => {
     $('.message .close').on('click',function () {$(this).closest('.message').transition('fade')});
     $("#message_body").on('keydown', function(event){
         if(event.key == 13){
-            event.target.textContent = "";
+            event.target.value = "";
             document.getElementById("send-chat").click();
         }
     });

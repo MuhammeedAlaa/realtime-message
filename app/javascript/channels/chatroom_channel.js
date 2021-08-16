@@ -2,7 +2,6 @@ import consumer from "./consumer"
 
 consumer.subscriptions.create("ChatroomChannel", {
   connected() {
-    console.log("connected...");
     // Called when the subscription is ready for use on the server
   },
 
@@ -11,10 +10,8 @@ consumer.subscriptions.create("ChatroomChannel", {
   },
 
   received(data) {
-    console.log(data);
-    // if(data.username != undefined)
-    //   $("#online-users").append(data.username);
     $("#message-box").append(data.user_message);
+    $("#message_body").val("");
      if($("#messages").length > 0){
         $("#messages").scrollTop($("#messages")[0].scrollHeight);
     }
