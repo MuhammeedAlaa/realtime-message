@@ -1,24 +1,45 @@
-# README
+<p align="center"> 
+    <img src="app/assets/images/favicon.ico" width="700"/>
+</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Table of contents
 
-Things you may want to cover:
+- [Table of contents](#table-of-contents)
+- [Description](#description)
+- [📷 Screenshots](#-screenshots)
+  - [🔑 User Management](#-user-management)
+  - [🙍‍♂️ Users](#️-users)
+- [Technologies](#technologies)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
+- [Contributers](#contributers)
 
-* Ruby version
+# Description
 
-* System dependencies
+Message-App is an app that has users that can sign in and sign up chat with each others in real time [Deployed App](https://alaa-blog-2021.herokuapp.com/).
 
-* Configuration
+# 📷 Screenshots
 
-* Database creation
+## 🔑 User Management
 
-* Database initialization
+![Login](./ScreenShots/LogIn.png)
+![SignUp](./ScreenShots/SignUp.png)
 
-* How to run the test suite
+## 🙍‍♂️ Users
 
-* Services (job queues, cache servers, search engines, etc.)
+![ChatRoom](./ScreenShots/ChatRoom.png)
 
-* Deployment instructions
+# Technologies
 
-* ...
+## Frontend
+
+- Embedded ruby
+
+## Backend
+
+- Ruby on rails
+- SQL
+
+# Contributers
+
+- [Muhammed Alaa](https://github.com/MuhammeedAlaa)
